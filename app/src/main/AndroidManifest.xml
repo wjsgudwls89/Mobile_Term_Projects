@@ -2,25 +2,48 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.quirodev.usagestatsmanagersample">
-
     <uses-permission
         android:name="android.permission.PACKAGE_USAGE_STATS"
         tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+
 
     <application
-        android:name=".App"
+        android:name=".getUsageTime.App"
+
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/icon"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        android:theme="@style/AppTheme"
+        >
+        <service android:name="com.quirodev.usagestatsmanagersample.AlwaysOnTopService"/>
+        <activity android:name="com.quirodev.usagestatsmanagersample.SplashActivity">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name="com.quirodev.usagestatsmanagersample.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+
+        </activity>
+        <activity android:name="com.quirodev.usagestatsmanagersample.LoginActivity"/>
+        <!--<activity android:name=".Ranking.Ranking"/>-->
+        <receiver android:name="com.quirodev.usagestatsmanagersample.BootReceiver"
+            android:enabled="true"
+            android:exported="false"
+            android:label="BootReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+
+
     </application>
+
 
 </manifest>
