@@ -1,39 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.quirodev.usagestatsmanagersample">
+    package="com.quirodev.sac">
     <uses-permission
         android:name="android.permission.PACKAGE_USAGE_STATS"
         tools:ignore="ProtectedPermissions" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
-    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
 
 
     <application
-        android:name=".getUsageTime.App"
+        android:name="com.quirodev.sac.getUsageTime.App"
 
         android:allowBackup="true"
         android:icon="@mipmap/icon"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme"
-        >
-        <service android:name="com.quirodev.usagestatsmanagersample.AlwaysOnTopService"/>
-        <activity android:name="com.quirodev.usagestatsmanagersample.SplashActivity">
+        android:theme="@style/AppTheme">
 
+        <service android:name="com.quirodev.sac.ScreenLock.AlwaysOnTopService"/>
+        <service android:name="com.quirodev.sac.PushMessage.MyFirebaseMessagingService">
+        <intent-filter>
+            <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+        </intent-filter>
+        </service>
+        <service android:name="com.quirodev.sac.Link.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <activity android:name="com.quirodev.sac.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.quirodev.usagestatsmanagersample.MainActivity"
+        <activity android:name="com.quirodev.sac.MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
 
         </activity>
-        <activity android:name="com.quirodev.usagestatsmanagersample.LoginActivity"/>
+        <activity android:name="com.quirodev.sac.LoginActivity"/>
         <!--<activity android:name=".Ranking.Ranking"/>-->
-        <receiver android:name="com.quirodev.usagestatsmanagersample.BootReceiver"
+        <receiver android:name="com.quirodev.sac.ScreenLock.BootReceiver"
             android:enabled="true"
             android:exported="false"
             android:label="BootReceiver">
@@ -41,7 +51,11 @@
                 <action android:name="android.intent.action.BOOT_COMPLETED"/>
             </intent-filter>
         </receiver>
-
+        <activity android:name="com.quirodev.sac.ScreenLock.setTime" android:theme="@style/Theme.AppCompat.Light.Dialog"/>
+        <activity android:name="com.quirodev.sac.PushMessage.PushNotification" android:theme="@style/Theme.AppCompat.Light.Dialog"/>
+        <activity android:name="com.quirodev.sac.Link.LinkMainActivity" android:theme="@style/Theme.AppCompat.Light.Dialog"/>
+        <activity android:name="com.quirodev.sac.Link.LinkPushActivity" android:theme="@style/Theme.AppCompat.Light.Dialog"/>
+        <activity android:name="com.quirodev.sac.Link.SetLinkActivity" android:theme="@style/Theme.AppCompat.Light.Dialog"/>
 
     </application>
 
