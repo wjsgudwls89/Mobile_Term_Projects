@@ -15,17 +15,12 @@
         android:name="com.quirodev.sac.getUsageTime.App"
 
         android:allowBackup="true"
-        android:icon="@mipmap/icon"
+        android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
         <service android:name="com.quirodev.sac.ScreenLock.AlwaysOnTopService"/>
-        <service android:name="com.quirodev.sac.PushMessage.MyFirebaseMessagingService">
-        <intent-filter>
-            <action android:name="com.google.firebase.MESSAGING_EVENT"/>
-        </intent-filter>
-        </service>
         <service android:name="com.quirodev.sac.Link.MyFirebaseMessagingService">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT"/>
@@ -41,7 +36,7 @@
             android:theme="@style/AppTheme.NoActionBar">
 
         </activity>
-        <activity android:name="com.quirodev.sac.LoginActivity"/>
+        <activity android:name="com.quirodev.sac.LoginActivity" android:theme="@style/LoginTheme"/>
         <!--<activity android:name=".Ranking.Ranking"/>-->
         <receiver android:name="com.quirodev.sac.ScreenLock.BootReceiver"
             android:enabled="true"
@@ -51,11 +46,15 @@
                 <action android:name="android.intent.action.BOOT_COMPLETED"/>
             </intent-filter>
         </receiver>
-        <activity android:name="com.quirodev.sac.ScreenLock.setTime" android:theme="@style/Theme.AppCompat.Light.Dialog"/>
-        <activity android:name="com.quirodev.sac.PushMessage.PushNotification" android:theme="@style/Theme.AppCompat.Light.Dialog"/>
-        <activity android:name="com.quirodev.sac.Link.LinkMainActivity" android:theme="@style/Theme.AppCompat.Light.Dialog"/>
-        <activity android:name="com.quirodev.sac.Link.LinkPushActivity" android:theme="@style/Theme.AppCompat.Light.Dialog"/>
-        <activity android:name="com.quirodev.sac.Link.SetLinkActivity" android:theme="@style/Theme.AppCompat.Light.Dialog"/>
+        <receiver android:name=".SetAlarm.ReceiveMessage"/>
+
+
+        <activity android:name="com.quirodev.sac.ScreenLock.setTime" android:theme="@style/CustomDialog"/>
+        <activity android:name="com.quirodev.sac.Link.LinkMainActivity" android:theme="@style/CustomDialog"/>
+        <activity android:name="com.quirodev.sac.Link.LinkPushActivity" android:theme="@style/CustomDialog"/>
+        <activity android:name="com.quirodev.sac.Link.SetLinkActivity" android:theme="@style/CustomDialog"/>
+        <activity android:name=".SetAlarm.PushNotification" android:theme="@style/CustomDialog"/>
+        <activity android:name=".HowToUseActivity" android:theme="@style/CustomDialog"/>
 
     </application>
 

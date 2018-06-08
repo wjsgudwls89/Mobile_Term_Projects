@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/Appusage"
+            android:icon="@drawable/appusage"
+            android:title="Appusage" />
+        <item
+            android:id="@+id/Applock"
+            android:icon="@drawable/padlock"
+            android:title="AppLock" />
+        <item
+            android:id="@+id/Ranking"
+            android:icon="@drawable/ranking"
+            android:title="Ranking" />
+        <item
+            android:id="@+id/Setalarm"
+            android:icon="@drawable/setalram_menu"
+            android:title="Set Alarm" />
+        <item
+            android:id="@+id/link"
+            android:icon="@drawable/linked"
+            android:title="Link"/>
+        <item
+            android:id="@+id/logout"
+            android:icon="@drawable/exit"
+            android:title="Logout"/>
+    </group>
+</menu>

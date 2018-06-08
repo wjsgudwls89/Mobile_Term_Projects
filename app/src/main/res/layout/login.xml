@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@color/colorPrimary"
+    tools:context=".LoginActivity">
+
+    <ImageView
+        android:id="@+id/imageview"
+        android:layout_width="150dp"
+        android:layout_height="400dp"
+        android:layout_gravity="center"
+        android:src="@drawable/loading2"/>
+
+        <Button
+            android:drawableLeft="@drawable/googleg_standard_color_18"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:background="@drawable/shape"
+            android:textSize="25dp"
+            android:textColor="@color/colorPrimaryDark"
+            android:text="LOGIN"
+            android:id="@+id/sign_in_button"
+            android:layout_width="300dp"
+            android:layout_height="55dp"
+            android:visibility="visible" />
+
+
+    </LinearLayout>
