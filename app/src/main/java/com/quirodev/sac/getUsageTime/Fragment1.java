@@ -102,6 +102,19 @@ public class Fragment1 extends Fragment implements UsageContract.View {
     public void setUserVisibleHint(boolean isVisibleToUser) {
         if(isVisibleToUser){
 
+            Thread thread = new Thread(){
+                @Override
+                public void run() {
+                    try{
+                        Thread.sleep(2000);
+                        ((MainActivity)getActivity()).setTime(((UsagePresenter_D)presenter).getTotal());
+                    }
+                    catch(Exception e){
+                        e.printStackTrace();
+                    }
+                }
+            };thread.start();
+
         }
         else{
         }
