@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:background="@color/colorPrimary"
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="50dp"
+    android:orientation="vertical">
+    <ImageView
+        android:paddingTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:src="@drawable/screenlock"/>
+    <TextView
+        android:paddingTop="30dp"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16dp"
+        android:textColor="@color/colorWhite"
+        android:background="@color/colorPrimary"
+        android:text="강제종료시 지정한 시간만큼 다시 시작됩니다"/>
+    <TextView
+        android:background="@color/colorPrimary"
+        android:textColor="@color/colorWhite"
+        android:id="@+id/textview3"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

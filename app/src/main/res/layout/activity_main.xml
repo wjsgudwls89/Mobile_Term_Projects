@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:openDrawer="start">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            app:titleTextColor="@color/colorWhite"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/textview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@color/colorWhite"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimary"
+                android:text="SAC"
+                android:textAlignment="center"
+                android:textSize="30dp"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimary"/>
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:id="@+id/content_main">
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                <Button
+                    android:drawableTop="@drawable/usage"
+                    android:paddingTop="50dp"
+                    android:paddingBottom="40dp"
+                    android:id="@+id/btn1"
+                    android:text="App usage"
+                    android:layout_weight="1"
+                    android:background="@drawable/ripple"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+                    <View
+                        android:background="@color/colorPrimary"
+                        android:layout_width="1dp"
+                        android:layout_height="wrap_content"/>
+                <Button
+                    android:drawableTop="@drawable/tablet"
+                    android:layout_weight="1"
+                    android:id="@+id/btn2"
+                    android:paddingTop="50dp"
+                    android:paddingBottom="40dp"
+                    android:text="Screen Lock"
+                    android:background="@drawable/ripple"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+                    </LinearLayout>
+                <View
+                    android:background="@color/colorPrimary"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"/>
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                <Button
+                    android:drawableTop="@drawable/ranking"
+                    android:paddingTop="50dp"
+                    android:paddingBottom="30dp"
+                    android:layout_weight="1"
+                    android:id="@+id/btn3"
+                    android:text="Ranking"
+                    android:background="@drawable/ripple"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+                    <View
+                        android:background="@color/colorPrimary"
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"/>
+                <Button
+                    android:drawableTop="@drawable/setalarm"
+                    android:paddingTop="50dp"
+                    android:paddingBottom="30dp"
+                    android:layout_weight="1"
+                    android:id="@+id/btn4"
+                    android:text="SET ALARM"
+                    android:background="@drawable/ripple"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+                </LinearLayout>
+                <View
+                    android:background="@color/colorPrimary"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"/>
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                <Button
+                    android:drawableTop="@drawable/linked"
+                    android:paddingTop="50dp"
+                    android:paddingBottom="30dp"
+                    android:layout_weight="1"
+                    android:id="@+id/btn5"
+                    android:text="Link"
+                    android:background="@drawable/ripple"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+                    <View
+                        android:background="@color/colorPrimary"
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"/>
+                    <Button
+                        android:id="@+id/btn6"
+                        android:layout_weight="1"
+                        android:text="How to use"
+                        android:drawableTop="@drawable/ex"
+                        android:paddingTop="50dp"
+                        android:paddingBottom="30dp"
+                        android:background="@drawable/ripple"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <android.support.design.widget.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:headerLayout="@layout/nav_header_main"
+        app:menu="@menu/activity_main_drawer"
+        tools:visibility="gone" />
+
+
+</android.support.v4.widget.DrawerLayout>

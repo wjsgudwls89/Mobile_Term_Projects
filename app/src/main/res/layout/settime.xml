@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    tools:context="com.quirodev.sac.MainActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:textStyle="bold"
+            android:background="@color/colorPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="53dp"
+            android:textSize="20sp"
+            android:text="SCREEN LOCK"
+            android:gravity="center"
+            android:textColor="@color/colorWhite" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:gravity="center"
+        android:padding="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <NumberPicker
+            android:id="@+id/locksetHour"
+            android:background="@color/colorWhite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="2dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="시간"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="2dp"/>
+        <NumberPicker
+            android:id="@+id/locksetMin"
+            android:background="@color/colorWhite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="2dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="분"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="2dp"/>
+        <NumberPicker
+            android:id="@+id/locksetSec"
+            android:background="@color/colorWhite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="2dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="초"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="2dp"/>
+        <!--
+    <EditText
+        android:id="@+id/settime"
+        android:hint="초단위로 입력하세요"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+        -->
+    </LinearLayout>
+    <View
+        android:background="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/button"
+            android:background="@drawable/ripple"
+            android:textColor="@color/colorPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="53dp"
+            android:layout_gravity="center"
+            android:text="Lock"/>
+</LinearLayout>
+</LinearLayout>
